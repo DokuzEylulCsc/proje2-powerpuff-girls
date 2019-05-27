@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElTuristiko
 {
-    class Musteri:Kullanici
+    public class Musteri:Kullanici
     {
         private List<Rezervasyon> rezervasyonlar;
 
@@ -19,7 +19,7 @@ namespace ElTuristiko
             return null;
         }
 
-        public void RezervasyonSil(int rezervaysonId)
+        public void RezervasyonSil(int rezervasyonId)
         {
 
         }

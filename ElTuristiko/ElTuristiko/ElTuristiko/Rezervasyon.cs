@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElTuristiko
 {      
-    class Rezervasyon
+    public class Rezervasyon
     {
         private int rezervasyonId;
         private DateTime rezervasyonBaslangic;

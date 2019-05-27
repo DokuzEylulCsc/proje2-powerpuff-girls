@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElTuristiko
 {
-    class Yonetici:Kullanici
+    public class Yonetici:Kullanici
     {
         private Otel yonetilenOtel;
 

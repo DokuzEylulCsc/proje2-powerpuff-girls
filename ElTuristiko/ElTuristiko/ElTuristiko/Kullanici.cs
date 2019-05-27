@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElTuristiko
 {
-     abstract class Kullanici
+    public  abstract class Kullanici
     {
         private string kullaniciAdi;
         private string sifre;

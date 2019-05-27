@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElTuristiko
 {
-   abstract class Otel
+   public abstract class Otel
     {
         private string otelAdi;
         private string konum;
@@ -26,7 +26,8 @@ namespace ElTuristiko
         public string Konum { get => konum; }
         public int YildizSayisi { get => yildizSayisi;  }
         public string Tur { get => tur;  }
-        internal List<Oda> Odalar { get => odalar; set => odalar = value; }
+        internal List<Oda> Odalar { get => odalar;  }
+        public void OdalaraEkle(Oda oda) { }
 
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElTuristiko
 {
-    abstract class Oda
+    public abstract class Oda
     {
         private float fiyat;
         private  List<string> ozellikler;
@@ -24,6 +24,6 @@ namespace ElTuristiko
         public float Fiyat { get => fiyat; }
         public List<string> Ozellikler { get => ozellikler;  }
         public int OdaKapasitesi { get => odaKapasitesi;  }
-        public int OdaId { get => odaId; set => odaId = value; }
+        public int OdaId { get => odaId;  }
     }
 }
