@@ -43,8 +43,21 @@ namespace ElTuristiko
         }
 
         private void kaydol_Click(object sender, EventArgs e)
-        {
 
+        {
+            if(kullaniciSecim.SelectedIndex==0)
+            {
+                Musteri musteri = new Musteri(kullaniciAdi.Text,sifre.Text,Convert.ToInt32(tcNo.Text),adTextBox.Text);
+                musteri.YoneticiMi = false;
+                Sistem.Nesne
+                
+
+            }
+            else
+            {
+                Yonetici yonetici = new Yonetici(kullaniciAdi.Text, sifre.Text, Convert.ToInt32(tcNo.Text), adTextBox.Text);
+                yonetici.YoneticiMi = true;
+            }   
         }
     }
 }

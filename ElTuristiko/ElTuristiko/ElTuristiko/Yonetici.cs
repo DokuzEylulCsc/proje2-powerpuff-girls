@@ -10,7 +10,7 @@ namespace ElTuristiko
     {
         private Otel yonetilenOtel;
 
-        public Yonetici(string kullaniciAdi, string sifre, int tcNo, string adSoyad, bool yoneticiMi) : base(kullaniciAdi, sifre, tcNo, adSoyad, yoneticiMi)
+        public Yonetici(string kullaniciAdi, string sifre, int tcNo, string adSoyad) : base(kullaniciAdi, sifre, tcNo, adSoyad)
         {
         }
 

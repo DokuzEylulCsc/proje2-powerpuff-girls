@@ -14,7 +14,7 @@ namespace ElTuristiko
         private string adSoyad;
         private bool yoneticiMi;
 
-        protected Kullanici(string kullaniciAdi, string sifre, int tcNo, string adSoyad, bool yoneticiMi)
+        protected Kullanici(string kullaniciAdi, string sifre, int tcNo, string adSoyad)
         {
             this.kullaniciAdi = kullaniciAdi;
             this.sifre = sifre;
@@ -27,7 +27,7 @@ namespace ElTuristiko
         public string Sifre { get => sifre;  }
         public int TcNo { get => tcNo;  }
         public string AdSoyad { get => adSoyad;  }
-        public bool YoneticiMi { get => yoneticiMi;  }
+        public bool YoneticiMi { get => yoneticiMi; set => YoneticiMi = value; }
 
         public void BilgiGuncelle(string kullaniciAdi, string sifre, int tcNo, string adSoyad, bool yoneticiMi)
         {

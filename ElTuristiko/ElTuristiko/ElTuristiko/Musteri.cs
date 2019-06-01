@@ -10,7 +10,7 @@ namespace ElTuristiko
     {
         private List<Rezervasyon> rezervasyonlar;
 
-        public Musteri(string kullaniciAdi, string sifre, int tcNo, string adSoyad, bool yoneticiMi) : base(kullaniciAdi, sifre, tcNo, adSoyad, yoneticiMi)
+        public Musteri(string kullaniciAdi, string sifre, int tcNo, string adSoyad) : base(kullaniciAdi, sifre, tcNo, adSoyad)
         {
 
         }
