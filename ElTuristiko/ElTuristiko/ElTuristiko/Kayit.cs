@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace ElTuristiko
 {
-    public partial class Form1 : Form
+    public partial class Kayit : Form
     {
-        public Form1()
+        public Kayit()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
