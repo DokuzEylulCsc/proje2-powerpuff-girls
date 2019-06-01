@@ -6,8 +6,25 @@ using System.Threading.Tasks;
 
 namespace ElTuristiko
 {
-    class Sistem
+     public class Sistem
     {
+        private static Sistem nesne = new Sistem();
+        private Sistem()
+        {
+           musteriler.Add
+
+        }
+        public static Sistem Nesne()
+        {
+            if (nesne == null)
+            {
+                nesne = new Sistem();
+            }
+            
+
+            return nesne;
+            
+        }
         private List<Otel> oteller;
         private List<Musteri> musteriler;
         private List<Yonetici> yoneticiler;
@@ -15,10 +32,8 @@ namespace ElTuristiko
 
         public List<Rezervasyon> Rezervasyonlar { get => rezervasyonlar; set => rezervasyonlar = value; }
 
-        public static Sistem GetSistem()
-        {
-            return null;
-        }
+
+       
 
         public Otel OtelEkle(Otel otel)
         {
