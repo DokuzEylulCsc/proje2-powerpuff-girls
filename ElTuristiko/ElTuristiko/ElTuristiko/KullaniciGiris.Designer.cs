@@ -39,14 +39,14 @@
             // 
             // kullaniciAd
             // 
-            this.kullaniciAd.Location = new System.Drawing.Point(135, 144);
+            this.kullaniciAd.Location = new System.Drawing.Point(359, 147);
             this.kullaniciAd.Name = "kullaniciAd";
             this.kullaniciAd.Size = new System.Drawing.Size(100, 20);
             this.kullaniciAd.TabIndex = 0;
             // 
             // kullaniciSifre
             // 
-            this.kullaniciSifre.Location = new System.Drawing.Point(135, 185);
+            this.kullaniciSifre.Location = new System.Drawing.Point(359, 188);
             this.kullaniciSifre.Name = "kullaniciSifre";
             this.kullaniciSifre.Size = new System.Drawing.Size(100, 20);
             this.kullaniciSifre.TabIndex = 1;
@@ -54,7 +54,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 147);
+            this.label1.Location = new System.Drawing.Point(188, 147);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 2;
@@ -63,7 +63,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 188);
+            this.label2.Location = new System.Drawing.Point(188, 188);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 3;
@@ -73,7 +73,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(88, 83);
+            this.label3.Location = new System.Drawing.Point(243, 76);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 13);
             this.label3.TabIndex = 4;
@@ -82,7 +82,7 @@
             // 
             // giris
             // 
-            this.giris.Location = new System.Drawing.Point(105, 296);
+            this.giris.Location = new System.Drawing.Point(262, 253);
             this.giris.Name = "giris";
             this.giris.Size = new System.Drawing.Size(75, 23);
             this.giris.TabIndex = 5;
@@ -91,7 +91,7 @@
             // 
             // kaydol
             // 
-            this.kaydol.Location = new System.Drawing.Point(471, 295);
+            this.kaydol.Location = new System.Drawing.Point(262, 299);
             this.kaydol.Name = "kaydol";
             this.kaydol.Size = new System.Drawing.Size(75, 23);
             this.kaydol.TabIndex = 6;
@@ -99,7 +99,7 @@
             this.kaydol.UseVisualStyleBackColor = true;
             this.kaydol.Click += new System.EventHandler(this.kaydol_Click);
             // 
-            // Form1
+            // KullaniciGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -111,7 +111,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.kullaniciSifre);
             this.Controls.Add(this.kullaniciAd);
-            this.Name = "Form1";
+            this.Name = "KullaniciGiris";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

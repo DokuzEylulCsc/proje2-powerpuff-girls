@@ -36,10 +36,10 @@
             this.sifre = new System.Windows.Forms.Label();
             this.kullaniciSecim = new System.Windows.Forms.ComboBox();
             this.kaydol = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.adTextBox = new System.Windows.Forms.TextBox();
+            this.tcTextBox = new System.Windows.Forms.TextBox();
+            this.kullaniciAdTextBox = new System.Windows.Forms.TextBox();
+            this.sifreTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -109,6 +109,7 @@
             this.kullaniciSecim.Size = new System.Drawing.Size(144, 21);
             this.kullaniciSecim.TabIndex = 6;
             this.kullaniciSecim.Text = "Seçiniz";
+            this.kullaniciSecim.SelectedIndexChanged += new System.EventHandler(this.kullaniciSecim_SelectedIndexChanged);
             // 
             // kaydol
             // 
@@ -118,44 +119,47 @@
             this.kaydol.TabIndex = 7;
             this.kaydol.Text = "Kayıt Ol";
             this.kaydol.UseVisualStyleBackColor = true;
+            this.kaydol.Click += new System.EventHandler(this.kaydol_Click);
             // 
-            // textBox1
+            // adTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(179, 105);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 20);
-            this.textBox1.TabIndex = 8;
+            this.adTextBox.Location = new System.Drawing.Point(179, 105);
+            this.adTextBox.Name = "adTextBox";
+            this.adTextBox.Size = new System.Drawing.Size(144, 20);
+            this.adTextBox.TabIndex = 8;
+            this.adTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // tcTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(179, 142);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(144, 20);
-            this.textBox2.TabIndex = 9;
+            this.tcTextBox.Location = new System.Drawing.Point(179, 142);
+            this.tcTextBox.Name = "tcTextBox";
+            this.tcTextBox.Size = new System.Drawing.Size(144, 20);
+            this.tcTextBox.TabIndex = 9;
+            this.tcTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox3
+            // kullaniciAdTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(179, 183);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(144, 20);
-            this.textBox3.TabIndex = 10;
+            this.kullaniciAdTextBox.Location = new System.Drawing.Point(179, 183);
+            this.kullaniciAdTextBox.Name = "kullaniciAdTextBox";
+            this.kullaniciAdTextBox.Size = new System.Drawing.Size(144, 20);
+            this.kullaniciAdTextBox.TabIndex = 10;
             // 
-            // textBox4
+            // sifreTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(179, 219);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(144, 20);
-            this.textBox4.TabIndex = 11;
+            this.sifreTextBox.Location = new System.Drawing.Point(179, 219);
+            this.sifreTextBox.Name = "sifreTextBox";
+            this.sifreTextBox.Size = new System.Drawing.Size(144, 20);
+            this.sifreTextBox.TabIndex = 11;
             // 
             // Kayit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 298);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.sifreTextBox);
+            this.Controls.Add(this.kullaniciAdTextBox);
+            this.Controls.Add(this.tcTextBox);
+            this.Controls.Add(this.adTextBox);
             this.Controls.Add(this.kaydol);
             this.Controls.Add(this.kullaniciSecim);
             this.Controls.Add(this.sifre);
@@ -181,9 +185,9 @@
         private System.Windows.Forms.Label sifre;
         private System.Windows.Forms.ComboBox kullaniciSecim;
         private System.Windows.Forms.Button kaydol;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox adTextBox;
+        private System.Windows.Forms.TextBox tcTextBox;
+        private System.Windows.Forms.TextBox kullaniciAdTextBox;
+        private System.Windows.Forms.TextBox sifreTextBox;
     }
 }
