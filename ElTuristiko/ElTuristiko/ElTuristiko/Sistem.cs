@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace ElTuristiko
 {
@@ -11,7 +15,8 @@ namespace ElTuristiko
         private static Sistem nesne = new Sistem();
         private Sistem()
         {
-           musteriler.Add
+            rezervasyonlar = new List<Rezervasyon>();
+            musteriler = new List<Musteri>();
 
         }
         public static Sistem Nesne()
@@ -25,37 +30,42 @@ namespace ElTuristiko
             return nesne;
             
         }
-        private List<Otel> oteller;
-        private List<Musteri> musteriler;
-        private List<Yonetici> yoneticiler;
-        private List<Rezervasyon> rezervasyonlar;
-
-        public List<Rezervasyon> Rezervasyonlar { get => rezervasyonlar; set => rezervasyonlar = value; }
-
+        private static  List<Otel> oteller;
+        private static List<Musteri> musteriler;
+        private static List<Yonetici> yoneticiler;
+        private static List<Rezervasyon> rezervasyonlar;
 
        
 
-        public Otel OtelEkle(Otel otel)
+        public List<Rezervasyon> Rezervasyonlar { get => rezervasyonlar; set => rezervasyonlar = value; }
+        public static List<Musteri> Musteriler1 { get => musteriler; set => musteriler = value; }
+        public static List<Yonetici> Yoneticiler { get => yoneticiler; set => yoneticiler = value; }
+        public static List<Rezervasyon> Rezervasyonlar1 { get => rezervasyonlar; set => rezervasyonlar = value; }
+
+        public static Otel OtelEkle(Otel otel)
         {
             return null;
         }
 
-        public Musteri MusteriEkle( Musteri musteri)
+        public static void MusteriEkle( Musteri musteri)
+        {
+            
+                
+            musteriler.Add(musteri);
+            
+        }
+
+        public static Yonetici YoneticiEkle(Yonetici yonetici)
         {
             return null;
         }
 
-        public Yonetici YoneticiEkle(Yonetici yonetici)
-        {
-            return null;
-        }
-
-        public void DosyayaKaydet()
+        public static void DosyayaKaydet()
         {
 
         }
 
-        public Sistem DosyadanOku()
+        public static Sistem DosyadanOku()
         {
             return null;
         }

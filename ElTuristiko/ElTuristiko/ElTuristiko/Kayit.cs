@@ -47,16 +47,16 @@ namespace ElTuristiko
         {
             if(kullaniciSecim.SelectedIndex==0)
             {
-                Musteri musteri = new Musteri(kullaniciAdi.Text,sifre.Text,Convert.ToInt32(tcNo.Text),adTextBox.Text);
-                musteri.YoneticiMi = false;
-                Sistem.Nesne
+                Musteri musteri = new Musteri(kullaniciAdTextBox.Text,sifreTextBox.Text,Convert.ToInt32(tcTextBox.Text),adTextBox.Text,false);
+   //             musteri.Rezervasyonlar = null;
+                Sistem.MusteriEkle(musteri);
                 
 
             }
             else
             {
-                Yonetici yonetici = new Yonetici(kullaniciAdi.Text, sifre.Text, Convert.ToInt32(tcNo.Text), adTextBox.Text);
-                yonetici.YoneticiMi = true;
+                Yonetici yonetici = new Yonetici(kullaniciAdi.Text, sifre.Text, Convert.ToInt32(tcNo.Text), adTextBox.Text,true);
+                
             }   
         }
     }
