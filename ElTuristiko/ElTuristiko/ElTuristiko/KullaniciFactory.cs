@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace ElTuristiko
 {
-    class KullaniciFactory : FactoryKullanici
+    class KullaniciFactory 
     {
-        public override Musteri MusteriOlustur()
+        public  Musteri MusteriOlustur()
         {
             throw new NotImplementedException();
         }
 
-        public override Yonetici YoneticiOlustur()
+        public  Yonetici YoneticiOlustur()
         {
             throw new NotImplementedException();
         }

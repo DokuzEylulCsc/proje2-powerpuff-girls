@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace ElTuristiko
 {
-    class OdaFactory : FactoryOda
+    class OdaFactory 
 
     {
-        public override CiftKisilik CiftKisilikOlustur()
+        public  CiftKisilik CiftKisilikOlustur()
         {
             throw new NotImplementedException();
         }
 
-        public override DortKisilik DortKisilikOlustur()
+        public  DortKisilik DortKisilikOlustur()
         {
             throw new NotImplementedException();
         }
 
-        public override TekKisilik TekKisilikOlustur()
+        public TekKisilik TekKisilikOlustur()
         {
             throw new NotImplementedException();
         }

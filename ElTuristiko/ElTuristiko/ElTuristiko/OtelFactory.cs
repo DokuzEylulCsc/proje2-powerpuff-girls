@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace ElTuristiko
 {
-    class OtelFactory : FactoryOtel
+    class OtelFactory 
     {
-        public override ButikOtel ButikOtelOlustur()
+        public  ButikOtel ButikOtelOlustur()
         {
             throw new NotImplementedException();
         }
 
-        public override Pansiyon PansiyonOlustur()
+        public Pansiyon PansiyonOlustur()
         {
             throw new NotImplementedException();
         }
 
-        public override TatilKoyu TatilKoyuOlustur()
+        public  TatilKoyu TatilKoyuOlustur()
         {
             throw new NotImplementedException();
         }
