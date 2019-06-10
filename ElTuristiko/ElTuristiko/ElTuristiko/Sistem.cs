@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +12,9 @@ using System.Threading.Tasks;
 
 namespace ElTuristiko
 {
-     public class Sistem
+    public class Sistem
     {
-        private static Sistem instance =null;
+        private static Sistem instance = null;
         private Sistem()
         {
             rezervasyonlar = new List<Rezervasyon>();
@@ -26,43 +28,50 @@ namespace ElTuristiko
             if (instance == null)
             {
                 instance = new Sistem();
+                instance.DosyadanOku();
             }
             return instance;
         }
-        private   List<Otel> oteller;
-        private  List<Musteri> musteriler;
-        private  List<Yonetici> yoneticiler;
-        private  List<Rezervasyon> rezervasyonlar;
+        private List<Otel> oteller;
+        private List<Musteri> musteriler;
+        private List<Yonetici> yoneticiler;
+        private List<Rezervasyon> rezervasyonlar;
 
-       
+
         public List<Rezervasyon> Rezervasyonlar { get => rezervasyonlar; set => rezervasyonlar = value; }
-        public  List<Musteri> Musteriler { get => musteriler; set => musteriler = value; }
-        public  List<Yonetici> Yoneticiler { get => yoneticiler; set => yoneticiler = value; }
+        public List<Musteri> Musteriler { get => musteriler; set => musteriler = value; }
+        public List<Yonetici> Yoneticiler { get => yoneticiler; set => yoneticiler = value; }
 
         public void OtelEkle(Otel otel)
         {
             oteller.Add(otel);
-            
+            DosyayaKaydet();
         }
 
-        public void MusteriEkle( Musteri musteri)
+        public void MusteriEkle(Musteri musteri)
         {
-            musteriler.Add(musteri);   
+            musteriler.Add(musteri);
+            DosyayaKaydet();
         }
 
         public void YoneticiEkle(Yonetici yonetici)
         {
             yoneticiler.Add(yonetici);
+            DosyayaKaydet();
         }
 
-        public void DosyayaKaydet()
+        private void DosyayaKaydet()
         {
-
+            File.WriteAllText(@"./musteriler.json", JsonConvert.SerializeObject(musteriler));
+            File.WriteAllText(@"./yoneticiler.json", JsonConvert.SerializeObject(yoneticiler));
+            File.WriteAllText(@"./oteller.json", JsonConvert.SerializeObject(oteller));
         }
 
-        public Sistem DosyadanOku()
+        private void DosyadanOku()
         {
-            return null;
+            musteriler = JsonConvert.DeserializeObject<List<Musteri>>(File.ReadAllText(@"./musteriler.json"));
+            yoneticiler = JsonConvert.DeserializeObject<List<Yonetici>>(File.ReadAllText(@"./yoneticiler.json"));
+            oteller = JsonConvert.DeserializeObject<List<Otel>>(File.ReadAllText(@"./oteller.json"));
         }
     }
 }
