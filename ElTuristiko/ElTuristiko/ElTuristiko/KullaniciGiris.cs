@@ -17,33 +17,59 @@ namespace ElTuristiko
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void kaydol_Click(object sender, EventArgs e)
         {
             Kayit kaydol = new Kayit();
             kaydol.Show();
             
-
-            
         }
 
         private void giris_Click(object sender, EventArgs e)
         {
+            if(kullaniciAd.Text != "" && kullaniciSifre.Text != "")
+            {
+                foreach(Musteri musteri in Sistem.GetInstance().Musteriler)
+                {
+                    Console.WriteLine(musteri.KullaniciAdi, musteri.Sifre);
 
+                    if (musteri.KullaniciAdi == kullaniciAd.Text && musteri.Sifre == kullaniciSifre.Text )
+                    {
+                        MusteriForm form = new MusteriForm();
+                        form.Show();
+                        this.Hide();
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lütfen giriş bilgilerinizi doğru giriniz", "Hata");
+                    }
+                }
+
+                foreach (Yonetici yonetici in Sistem.GetInstance().Yoneticiler)
+                {
+                    Console.WriteLine(yonetici.KullaniciAdi, yonetici.Sifre);
+                    if(yonetici.KullaniciAdi == kullaniciAd.Text &&    yonetici.Sifre == kullaniciSifre.Text)
+                    {
+                        YoneticiForm form = new YoneticiForm();
+                        form.Show();
+                        this.Hide();
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lütfen giriş bilgilerinizi doğru giriniz", "Hata");
+                    }
+                }
+
+                MessageBox.Show("Lütfen giriş bilgilerinizi doğru giriniz", "Hata");
+
+            }
+            else
+            {
+                MessageBox.Show("Lütfen giriş bilgilerinizi doğru giriniz", "Hata");
+            }
         }
     }
 }

@@ -12,7 +12,7 @@ namespace ElTuristiko
 {
      public class Sistem
     {
-        private static Sistem nesne = new Sistem();
+        private static Sistem instance =null;
         private Sistem()
         {
             rezervasyonlar = new List<Rezervasyon>();
@@ -21,53 +21,46 @@ namespace ElTuristiko
             oteller = new List<Otel>();
 
         }
-        public static Sistem Nesne()
+        public static Sistem GetInstance()
         {
-            if (nesne == null)
+            if (instance == null)
             {
-                nesne = new Sistem();
+                instance = new Sistem();
             }
-            
-
-            return nesne;
-            
+            return instance;
         }
-        private static  List<Otel> oteller;
-        private static List<Musteri> musteriler;
-        private static List<Yonetici> yoneticiler;
-        private static List<Rezervasyon> rezervasyonlar;
+        private   List<Otel> oteller;
+        private  List<Musteri> musteriler;
+        private  List<Yonetici> yoneticiler;
+        private  List<Rezervasyon> rezervasyonlar;
 
        
-
         public List<Rezervasyon> Rezervasyonlar { get => rezervasyonlar; set => rezervasyonlar = value; }
-        public static List<Musteri> Musteriler { get => musteriler; set => musteriler = value; }
-        public static List<Yonetici> Yoneticiler { get => yoneticiler; set => yoneticiler = value; }
-        public static List<Rezervasyon> Rezervasyonlar1 { get => rezervasyonlar; set => rezervasyonlar = value; }
+        public  List<Musteri> Musteriler { get => musteriler; set => musteriler = value; }
+        public  List<Yonetici> Yoneticiler { get => yoneticiler; set => yoneticiler = value; }
 
-        public static void OtelEkle(Otel otel)
+        public void OtelEkle(Otel otel)
         {
             oteller.Add(otel);
             
         }
 
-        public static void MusteriEkle( Musteri musteri)
+        public void MusteriEkle( Musteri musteri)
         {
-        
-            musteriler.Add(musteri);
-            
+            musteriler.Add(musteri);   
         }
 
-        public static void YoneticiEkle(Yonetici yonetici)
+        public void YoneticiEkle(Yonetici yonetici)
         {
             yoneticiler.Add(yonetici);
         }
 
-        public static void DosyayaKaydet()
+        public void DosyayaKaydet()
         {
 
         }
 
-        public static Sistem DosyadanOku()
+        public Sistem DosyadanOku()
         {
             return null;
         }

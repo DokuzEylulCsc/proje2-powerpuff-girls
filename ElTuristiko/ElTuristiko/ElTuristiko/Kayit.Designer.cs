@@ -45,62 +45,54 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(169, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(127, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 17);
+            this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kullanıcı Kayıt Ol";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // kullaniciTur
             // 
             this.kullaniciTur.AutoSize = true;
-            this.kullaniciTur.Location = new System.Drawing.Point(72, 84);
-            this.kullaniciTur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.kullaniciTur.Location = new System.Drawing.Point(54, 68);
             this.kullaniciTur.Name = "kullaniciTur";
-            this.kullaniciTur.Size = new System.Drawing.Size(94, 17);
+            this.kullaniciTur.Size = new System.Drawing.Size(71, 13);
             this.kullaniciTur.TabIndex = 1;
             this.kullaniciTur.Text = "Kullanıcı Türü";
             // 
             // adSoyad
             // 
             this.adSoyad.AutoSize = true;
-            this.adSoyad.Location = new System.Drawing.Point(76, 133);
-            this.adSoyad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.adSoyad.Location = new System.Drawing.Point(54, 105);
             this.adSoyad.Name = "adSoyad";
-            this.adSoyad.Size = new System.Drawing.Size(78, 17);
+            this.adSoyad.Size = new System.Drawing.Size(59, 13);
             this.adSoyad.TabIndex = 2;
             this.adSoyad.Text = "Ad - Soyad";
             // 
             // tcNo
             // 
             this.tcNo.AutoSize = true;
-            this.tcNo.Location = new System.Drawing.Point(85, 175);
-            this.tcNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tcNo.Location = new System.Drawing.Point(54, 142);
             this.tcNo.Name = "tcNo";
-            this.tcNo.Size = new System.Drawing.Size(48, 17);
+            this.tcNo.Size = new System.Drawing.Size(38, 13);
             this.tcNo.TabIndex = 3;
             this.tcNo.Text = "TC No";
             // 
             // kullaniciAdi
             // 
             this.kullaniciAdi.AutoSize = true;
-            this.kullaniciAdi.Location = new System.Drawing.Point(72, 225);
-            this.kullaniciAdi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.kullaniciAdi.Location = new System.Drawing.Point(54, 179);
             this.kullaniciAdi.Name = "kullaniciAdi";
-            this.kullaniciAdi.Size = new System.Drawing.Size(84, 17);
+            this.kullaniciAdi.Size = new System.Drawing.Size(64, 13);
             this.kullaniciAdi.TabIndex = 4;
             this.kullaniciAdi.Text = "Kullanıcı Adı";
-            this.kullaniciAdi.Click += new System.EventHandler(this.label5_Click);
             // 
             // sifre
             // 
             this.sifre.AutoSize = true;
-            this.sifre.Location = new System.Drawing.Point(85, 270);
-            this.sifre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.sifre.Location = new System.Drawing.Point(54, 216);
             this.sifre.Name = "sifre";
-            this.sifre.Size = new System.Drawing.Size(37, 17);
+            this.sifre.Size = new System.Drawing.Size(28, 13);
             this.sifre.TabIndex = 5;
             this.sifre.Text = "Şifre";
             // 
@@ -110,20 +102,17 @@
             this.kullaniciSecim.Items.AddRange(new object[] {
             "Müşteri",
             "Yönetici"});
-            this.kullaniciSecim.Location = new System.Drawing.Point(239, 80);
-            this.kullaniciSecim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kullaniciSecim.Location = new System.Drawing.Point(179, 64);
             this.kullaniciSecim.Name = "kullaniciSecim";
-            this.kullaniciSecim.Size = new System.Drawing.Size(191, 24);
+            this.kullaniciSecim.Size = new System.Drawing.Size(144, 21);
             this.kullaniciSecim.TabIndex = 6;
             this.kullaniciSecim.Text = "Seçiniz";
-            this.kullaniciSecim.SelectedIndexChanged += new System.EventHandler(this.kullaniciSecim_SelectedIndexChanged);
             // 
             // kaydol
             // 
-            this.kaydol.Location = new System.Drawing.Point(331, 324);
-            this.kaydol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kaydol.Location = new System.Drawing.Point(248, 263);
             this.kaydol.Name = "kaydol";
-            this.kaydol.Size = new System.Drawing.Size(100, 28);
+            this.kaydol.Size = new System.Drawing.Size(75, 23);
             this.kaydol.TabIndex = 7;
             this.kaydol.Text = "Kayıt Ol";
             this.kaydol.UseVisualStyleBackColor = true;
@@ -131,43 +120,38 @@
             // 
             // adTextBox
             // 
-            this.adTextBox.Location = new System.Drawing.Point(239, 129);
-            this.adTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.adTextBox.Location = new System.Drawing.Point(179, 101);
             this.adTextBox.Name = "adTextBox";
-            this.adTextBox.Size = new System.Drawing.Size(191, 22);
+            this.adTextBox.Size = new System.Drawing.Size(144, 20);
             this.adTextBox.TabIndex = 8;
-            this.adTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tcTextBox
             // 
-            this.tcTextBox.Location = new System.Drawing.Point(239, 175);
-            this.tcTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tcTextBox.Location = new System.Drawing.Point(179, 138);
             this.tcTextBox.Name = "tcTextBox";
-            this.tcTextBox.Size = new System.Drawing.Size(191, 22);
+            this.tcTextBox.Size = new System.Drawing.Size(144, 20);
             this.tcTextBox.TabIndex = 9;
-            this.tcTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // kullaniciAdTextBox
             // 
-            this.kullaniciAdTextBox.Location = new System.Drawing.Point(239, 225);
-            this.kullaniciAdTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kullaniciAdTextBox.Location = new System.Drawing.Point(179, 175);
             this.kullaniciAdTextBox.Name = "kullaniciAdTextBox";
-            this.kullaniciAdTextBox.Size = new System.Drawing.Size(191, 22);
+            this.kullaniciAdTextBox.Size = new System.Drawing.Size(144, 20);
             this.kullaniciAdTextBox.TabIndex = 10;
             // 
             // sifreTextBox
             // 
-            this.sifreTextBox.Location = new System.Drawing.Point(239, 270);
-            this.sifreTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sifreTextBox.Location = new System.Drawing.Point(179, 212);
             this.sifreTextBox.Name = "sifreTextBox";
-            this.sifreTextBox.Size = new System.Drawing.Size(191, 22);
+            this.sifreTextBox.Size = new System.Drawing.Size(144, 20);
             this.sifreTextBox.TabIndex = 11;
+            this.sifreTextBox.UseSystemPasswordChar = true;
             // 
             // Kayit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 367);
+            this.ClientSize = new System.Drawing.Size(388, 298);
             this.Controls.Add(this.sifreTextBox);
             this.Controls.Add(this.kullaniciAdTextBox);
             this.Controls.Add(this.tcTextBox);
@@ -180,10 +164,8 @@
             this.Controls.Add(this.adSoyad);
             this.Controls.Add(this.kullaniciTur);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Kayit";
             this.Text = "Kayit";
-            this.Load += new System.EventHandler(this.Kayit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

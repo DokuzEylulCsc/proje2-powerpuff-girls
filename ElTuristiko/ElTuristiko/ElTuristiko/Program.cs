@@ -18,7 +18,7 @@ namespace ElTuristiko
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new KullaniciGiris());
-            Sistem sistem = Sistem.Nesne();
+            Sistem sistem = Sistem.GetInstance();
 
 
         }
