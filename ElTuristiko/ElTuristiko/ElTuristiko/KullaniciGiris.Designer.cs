@@ -113,6 +113,7 @@
             this.Controls.Add(this.kullaniciAd);
             this.Name = "KullaniciGiris";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.KullaniciGiris_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

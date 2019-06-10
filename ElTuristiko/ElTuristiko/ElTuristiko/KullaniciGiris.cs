@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ElTuristiko
@@ -15,26 +8,24 @@ namespace ElTuristiko
         public KullaniciGiris()
         {
             InitializeComponent();
-        }
+            Sistem.GetInstance();
 
-        
+        }
 
         private void kaydol_Click(object sender, EventArgs e)
         {
             Kayit kaydol = new Kayit();
             kaydol.Show();
-            
+
         }
 
         private void giris_Click(object sender, EventArgs e)
         {
-            if(kullaniciAd.Text != "" && kullaniciSifre.Text != "")
+            if (kullaniciAd.Text != "" && kullaniciSifre.Text != "")
             {
-                foreach(Musteri musteri in Sistem.GetInstance().Musteriler)
+                foreach (Musteri musteri in Sistem.GetInstance().Musteriler)
                 {
-                    Console.WriteLine(musteri.KullaniciAdi, musteri.Sifre);
-
-                    if (musteri.KullaniciAdi == kullaniciAd.Text && musteri.Sifre == kullaniciSifre.Text )
+                    if (musteri.KullaniciAdi == kullaniciAd.Text && musteri.Sifre == kullaniciSifre.Text)
                     {
                         MusteriForm form = new MusteriForm();
                         form.Show();
@@ -50,7 +41,7 @@ namespace ElTuristiko
                 foreach (Yonetici yonetici in Sistem.GetInstance().Yoneticiler)
                 {
                     Console.WriteLine(yonetici.KullaniciAdi, yonetici.Sifre);
-                    if(yonetici.KullaniciAdi == kullaniciAd.Text &&    yonetici.Sifre == kullaniciSifre.Text)
+                    if (yonetici.KullaniciAdi == kullaniciAd.Text && yonetici.Sifre == kullaniciSifre.Text)
                     {
                         YoneticiForm form = new YoneticiForm();
                         form.Show();
@@ -70,6 +61,11 @@ namespace ElTuristiko
             {
                 MessageBox.Show("Lütfen giriş bilgilerinizi doğru giriniz", "Hata");
             }
+        }
+
+        private void KullaniciGiris_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
