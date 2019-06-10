@@ -40,5 +40,10 @@ namespace ElTuristiko
 
             
         }
+
+        private void giris_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

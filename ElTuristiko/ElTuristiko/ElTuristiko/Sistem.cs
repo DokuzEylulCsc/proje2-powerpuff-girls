@@ -17,6 +17,8 @@ namespace ElTuristiko
         {
             rezervasyonlar = new List<Rezervasyon>();
             musteriler = new List<Musteri>();
+            yoneticiler = new List<Yonetici>();
+            oteller = new List<Otel>();
 
         }
         public static Sistem Nesne()
@@ -38,26 +40,26 @@ namespace ElTuristiko
        
 
         public List<Rezervasyon> Rezervasyonlar { get => rezervasyonlar; set => rezervasyonlar = value; }
-        public static List<Musteri> Musteriler1 { get => musteriler; set => musteriler = value; }
+        public static List<Musteri> Musteriler { get => musteriler; set => musteriler = value; }
         public static List<Yonetici> Yoneticiler { get => yoneticiler; set => yoneticiler = value; }
         public static List<Rezervasyon> Rezervasyonlar1 { get => rezervasyonlar; set => rezervasyonlar = value; }
 
-        public static Otel OtelEkle(Otel otel)
+        public static void OtelEkle(Otel otel)
         {
-            return null;
+            oteller.Add(otel);
+            
         }
 
         public static void MusteriEkle( Musteri musteri)
         {
-            
-                
+        
             musteriler.Add(musteri);
             
         }
 
-        public static Yonetici YoneticiEkle(Yonetici yonetici)
+        public static void YoneticiEkle(Yonetici yonetici)
         {
-            return null;
+            yoneticiler.Add(yonetici);
         }
 
         public static void DosyayaKaydet()
