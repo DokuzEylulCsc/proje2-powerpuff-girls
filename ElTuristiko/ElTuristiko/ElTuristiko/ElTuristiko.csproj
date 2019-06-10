@@ -45,6 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MusteriForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriForm.Designer.cs">
+      <DependentUpon>MusteriForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoneticiForm.Designer.cs">
+      <DependentUpon>YoneticiForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ButikOtel.cs" />
     <Compile Include="CiftKisilik.cs" />
     <Compile Include="DortKisilik.cs" />
