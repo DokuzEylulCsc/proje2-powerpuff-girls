@@ -48,9 +48,6 @@
     <Compile Include="ButikOtel.cs" />
     <Compile Include="CiftKisilik.cs" />
     <Compile Include="DortKisilik.cs" />
-    <Compile Include="FactoryKullanici.cs" />
-    <Compile Include="FactoryOda.cs" />
-    <Compile Include="FactoryOtel.cs" />
     <Compile Include="KullaniciGiris.cs">
       <SubType>Form</SubType>
     </Compile>
