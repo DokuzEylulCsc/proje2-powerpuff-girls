@@ -7,14 +7,6 @@ namespace ElTuristiko
     public class Sistem
     {
         private static Sistem instance = null;
-        private Sistem()
-        {
-            rezervasyonlar = new List<Rezervasyon>();
-            musteriler = new List<Musteri>();
-            yoneticiler = new List<Yonetici>();
-            oteller = new List<Otel>();
-
-        }
         public static Sistem GetInstance()
         {
             //singleton çağırıcı
@@ -25,11 +17,18 @@ namespace ElTuristiko
             }
             return instance;
         }
+
         private List<Otel> oteller;
         private List<Musteri> musteriler;
         private List<Yonetici> yoneticiler;
         private List<Rezervasyon> rezervasyonlar;
-
+        public Sistem()
+        {
+            oteller = new List<Otel>();
+            musteriler = new List<Musteri>();
+            yoneticiler = new List<Yonetici>();
+            rezervasyonlar = new List<Rezervasyon>();
+        }
 
         public List<Rezervasyon> Rezervasyonlar { get => rezervasyonlar; set => rezervasyonlar = value; }
         public List<Musteri> Musteriler { get => musteriler; set => musteriler = value; }
@@ -37,6 +36,9 @@ namespace ElTuristiko
 
         public void OtelEkle(Otel otel)
         {
+            if (oteller == null)
+                oteller = new List<Otel>();
+
             //sisteme otel ekler
             oteller.Add(otel);
             DosyayaKaydet();
@@ -51,6 +53,8 @@ namespace ElTuristiko
 
         public void YoneticiEkle(Yonetici yonetici)
         {
+            if (yoneticiler == null)
+                yoneticiler = new List<Yonetici>();
             //sisteme yönetici ekler
             yoneticiler.Add(yonetici);
             DosyayaKaydet();
@@ -67,14 +71,18 @@ namespace ElTuristiko
         public void DosyadanOku()
         {
             //bilgileri json.net kütüphanesi ile dosyalardan okur
-            JsonConverter[] converters = { new OtelConverter() };
+            JsonConverter[] converters = { new OtelConverter(), new OdaConverter() };
             musteriler = JsonConvert.DeserializeObject<List<Musteri>>(File.ReadAllText(@"./musteriler.json"));
             yoneticiler = JsonConvert.DeserializeObject<List<Yonetici>>(File.ReadAllText(@"./yoneticiler.json")
                 , new JsonSerializerSettings()
                 {
                     Converters = converters
                 });
-            oteller = JsonConvert.DeserializeObject<List<Otel>>(File.ReadAllText(@"./oteller.json"));
+            oteller = JsonConvert.DeserializeObject<List<Otel>>(File.ReadAllText(@"./oteller.json"),
+                new JsonSerializerSettings()
+                {
+                    Converters = converters
+                });
         }
     }
 }

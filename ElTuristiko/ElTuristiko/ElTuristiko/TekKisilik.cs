@@ -11,6 +11,8 @@ namespace ElTuristiko
         public TekKisilik(float fiyat, List<string> ozellikler, int odaKapasitesi) : base(fiyat, ozellikler, odaKapasitesi)
         {
         }
-
+        private int tip = 3;
+        private bool ayriMi = false;
+        public int Tip { get => tip; set => tip = value; }
     }
 }

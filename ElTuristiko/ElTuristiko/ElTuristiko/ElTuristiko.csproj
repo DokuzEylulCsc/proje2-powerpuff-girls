@@ -54,6 +54,7 @@
     <Compile Include="MusteriForm.Designer.cs">
       <DependentUpon>MusteriForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OdaConverter.cs" />
     <Compile Include="OtelConverter.cs" />
     <Compile Include="YoneticiForm.cs">
       <SubType>Form</SubType>
@@ -122,6 +123,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="girişBilgileri.txt">
+      <SubType>Component</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

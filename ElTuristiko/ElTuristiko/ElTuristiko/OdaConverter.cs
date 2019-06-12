@@ -6,15 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//kaynak : https://blog.codeinside.eu/2015/03/30/json-dotnet-deserialize-to-abstract-class-or-interface/
-//abstract sınıflar jsondan okunurken hata veriyordu hata çözümü yukarıdaki linkte mevcur
 namespace ElTuristiko
 {
-    class OtelConverter : JsonConverter
+    class OdaConverter : JsonConverter
     {
         public override bool CanConvert(Type objectType)
         {
-            return (objectType == typeof(Otel));
+            return (objectType == typeof(Oda));
         }
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
@@ -23,17 +21,19 @@ namespace ElTuristiko
             try
             {
                 jo = JObject.Load(reader);
+
             }
             catch (Exception)
             {
+
                 return null;
             }
-            if (jo["Tur"].Value<string>() == "Pansiyon")
-                return jo.ToObject<Pansiyon>(serializer);
-            if (jo["Tur"].Value<string>() == "Butik Otel")
-                return jo.ToObject<ButikOtel>(serializer);
-            if (jo["Tur"].Value<string>() == "Tatil Köyü")
-                return jo.ToObject<TatilKoyu>(serializer);
+            if (jo["Tip"].Value<int>() == 1)
+                return jo.ToObject<TekKisilik>(serializer);
+            if (jo["Tip"].Value<int>() == 2)
+                return jo.ToObject<CiftKisilik>(serializer);
+            if (jo["Tip"].Value<int>() == 3)
+                return jo.ToObject<DortKisilik>(serializer);
             return null;
         }
 

@@ -12,6 +12,8 @@ namespace ElTuristiko
         private  List<string> ozellikler;
         private int odaKapasitesi;
         private int odaId;
+        private bool ayriMi;
+        private int tip;
 
         public Oda(float fiyat, List<string> ozellikler, int odaKapasitesi)
         {

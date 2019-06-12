@@ -9,19 +9,18 @@ namespace ElTuristiko
     class OdaFactory 
 
     {
-        public  CiftKisilik CiftKisilikOlustur()
+        public  CiftKisilik CiftKisilikOlustur(float fiyat, List<string> ozellikler, int kapasite)
         {
-            throw new NotImplementedException();
+            return new CiftKisilik(fiyat,ozellikler,kapasite);
         }
 
-        public  DortKisilik DortKisilikOlustur()
+        public  DortKisilik DortKisilikOlustur(float fiyat, List<string> ozellikler, int kapasite)
         {
-            throw new NotImplementedException();
+            return new DortKisilik(fiyat,ozellikler,kapasite);
         }
 
-        public TekKisilik TekKisilikOlustur()
+        public TekKisilik TekKisilikOlustur(float fiyat,List<string> ozellikler,int kapasite)
         {
-            throw new NotImplementedException();
-        }
+            return new TekKisilik(fiyat,ozellikler,kapasite);       }
     }
 }

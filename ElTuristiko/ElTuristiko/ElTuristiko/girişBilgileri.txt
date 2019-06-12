@@ -1,0 +1,8 @@
+﻿musteri:
+kullanici adı = musteri
+şifre = 123
+
+
+yonetici:
+kullanici adı = yonetici
+şifre = 123

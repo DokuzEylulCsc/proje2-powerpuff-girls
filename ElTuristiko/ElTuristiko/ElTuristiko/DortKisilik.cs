@@ -8,11 +8,14 @@ namespace ElTuristiko
 {
     class DortKisilik : Oda
     {
-        private List<bool> ayriMi;
+        private bool ayriMi;
+        private int tip = 3;
+
         public DortKisilik(float fiyat, List<string> ozellikler, int odaKapasitesi) : base(fiyat, ozellikler, odaKapasitesi)
         {
         }
 
-        public List<bool> AyriMi { get => ayriMi; set => ayriMi = value; }
+        public bool AyriMi { get => ayriMi; set => ayriMi = value; }
+        public int Tip { get => tip; set => tip = value; }
     }
 }

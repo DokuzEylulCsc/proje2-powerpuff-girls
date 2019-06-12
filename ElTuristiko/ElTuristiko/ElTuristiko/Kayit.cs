@@ -31,7 +31,7 @@ namespace ElTuristiko
             else if (kullaniciSecim.SelectedIndex == 1)
             {
                 Yonetici yonetici = factory.YoneticiOlustur(kullaniciAdTextBox.Text,
-                    sifreTextBox.Text, Convert.ToInt32(tcNo.Text), adTextBox.Text, true);
+                    sifreTextBox.Text, Convert.ToInt32(tcTextBox.Text), adTextBox.Text, true);
                 Sistem.GetInstance().YoneticiEkle(yonetici);
                 KullaniciOlusturuldu();
             }

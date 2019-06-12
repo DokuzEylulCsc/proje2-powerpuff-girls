@@ -33,7 +33,7 @@ namespace ElTuristiko
         public List<Rezervasyon> Rezervasyonlar { get => rezervasyonlar; set => rezervasyonlar = value; }
         public void OdalaraEkle(Oda oda)
         {
-            OdaFactory factory = new OdaFactory();
+            odalar.Add(oda);
         }
 
     }
