@@ -1,14 +1,6 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 namespace ElTuristiko
 {
@@ -60,14 +52,14 @@ namespace ElTuristiko
             DosyayaKaydet();
         }
 
-        private void DosyayaKaydet()
+        public void DosyayaKaydet()
         {
             File.WriteAllText(@"./musteriler.json", JsonConvert.SerializeObject(musteriler));
             File.WriteAllText(@"./yoneticiler.json", JsonConvert.SerializeObject(yoneticiler));
             File.WriteAllText(@"./oteller.json", JsonConvert.SerializeObject(oteller));
         }
 
-        private void DosyadanOku()
+        public void DosyadanOku()
         {
             musteriler = JsonConvert.DeserializeObject<List<Musteri>>(File.ReadAllText(@"./musteriler.json"));
             yoneticiler = JsonConvert.DeserializeObject<List<Yonetici>>(File.ReadAllText(@"./yoneticiler.json"));

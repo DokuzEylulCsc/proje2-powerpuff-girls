@@ -20,15 +20,18 @@ namespace ElTuristiko
         private void kaydol_Click(object sender, EventArgs e)
 
         {
-            if(kullaniciSecim.SelectedIndex==0)
+            KullaniciFactory factory = new KullaniciFactory();
+            if (kullaniciSecim.SelectedIndex == 0)
             {
-               Musteri musteri = new Musteri(kullaniciAdTextBox.Text,sifreTextBox.Text,Convert.ToInt32(tcTextBox.Text),adTextBox.Text,false);
-               Sistem.GetInstance().MusteriEkle(musteri);
+                Musteri m = factory.MusteriOlustur(kullaniciAdTextBox.Text,
+                    sifreTextBox.Text, Convert.ToInt32(tcNo.Text), adTextBox.Text, false);
+                Sistem.GetInstance().MusteriEkle(m);
                 KullaniciOlusturuldu();
             }
-            else if(kullaniciSecim.SelectedIndex == 1)
+            else if (kullaniciSecim.SelectedIndex == 1)
             {
-                Yonetici yonetici = new Yonetici(kullaniciAdTextBox.Text, sifreTextBox.Text, Convert.ToInt32(tcTextBox.Text), adTextBox.Text, true);
+                Yonetici yonetici = factory.YoneticiOlustur(kullaniciAdTextBox.Text,
+                    sifreTextBox.Text, Convert.ToInt32(tcNo.Text), adTextBox.Text, true);
                 Sistem.GetInstance().YoneticiEkle(yonetici);
                 KullaniciOlusturuldu();
             }
@@ -45,6 +48,6 @@ namespace ElTuristiko
             if (result == DialogResult.OK)
                 this.Dispose();
         }
-        
+
     }
 }

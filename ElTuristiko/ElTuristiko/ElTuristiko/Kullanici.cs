@@ -14,17 +14,14 @@ namespace ElTuristiko
         private string adSoyad;
         private bool yoneticiMi;
 
-        protected Kullanici(string kullaniciAdi, string sifre, int tcNo, string adSoyad, bool yoneticiMi)
+        private Kullanici() { }
+        public Kullanici(string kullaniciAdi, string sifre, int tcNo, string adSoyad, bool yoneticiMi)
         {
             this.kullaniciAdi = kullaniciAdi;
             this.sifre = sifre;
             this.tcNo = tcNo;
             this.adSoyad = adSoyad;
             this.yoneticiMi = yoneticiMi;
-        }
-        private Kullanici()
-        {
-
         }
 
         public string KullaniciAdi { get => kullaniciAdi;  }

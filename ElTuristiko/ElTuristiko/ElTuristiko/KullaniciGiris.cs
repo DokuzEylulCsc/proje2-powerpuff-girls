@@ -32,10 +32,6 @@ namespace ElTuristiko
                         this.Hide();
                         return;
                     }
-                    else
-                    {
-                        MessageBox.Show("Lütfen giriş bilgilerinizi doğru giriniz", "Hata");
-                    }
                 }
 
                 foreach (Yonetici yonetici in Sistem.GetInstance().Yoneticiler)
@@ -43,14 +39,10 @@ namespace ElTuristiko
                     Console.WriteLine(yonetici.KullaniciAdi, yonetici.Sifre);
                     if (yonetici.KullaniciAdi == kullaniciAd.Text && yonetici.Sifre == kullaniciSifre.Text)
                     {
-                        YoneticiForm form = new YoneticiForm();
+                        YoneticiForm form = new YoneticiForm(yonetici);
                         form.Show();
                         this.Hide();
                         return;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Lütfen giriş bilgilerinizi doğru giriniz", "Hata");
                     }
                 }
 

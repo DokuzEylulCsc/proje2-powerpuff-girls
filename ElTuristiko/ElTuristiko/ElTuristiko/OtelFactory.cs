@@ -1,26 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ElTuristiko
 {
     class OtelFactory 
     {
-        public  ButikOtel ButikOtelOlustur()
+        
+        public ButikOtel ButikOtelOlustur(string otelAdi, string konum, string yildizSayisi)
         {
-            throw new NotImplementedException();
+            return new ButikOtel(otelAdi,konum,Convert.ToInt32(yildizSayisi),"Butik Otel");
         }
 
-        public Pansiyon PansiyonOlustur()
+        public TatilKoyu TatilKoyuOlustur(string otelAdi, string konum, string yildizSayisi)
         {
-            throw new NotImplementedException();
+            return new TatilKoyu(otelAdi, konum, Convert.ToInt32(yildizSayisi), "Tatil Köyü");
+
         }
 
-        public  TatilKoyu TatilKoyuOlustur()
+        internal Pansiyon PansiyonOlustur(string otelAdi, string konum, string yildizSayisi)
         {
-            throw new NotImplementedException();
+            return new Pansiyon(otelAdi, konum, Convert.ToInt32(yildizSayisi), "Pansiyon");
+       
         }
     }
 }

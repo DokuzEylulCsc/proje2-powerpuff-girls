@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ElTuristiko
+﻿namespace ElTuristiko
 {
     public class Yonetici:Kullanici
     {
-        private Otel yonetilenOtel;
+        private Otel yonetilenOtel = null;
 
-        public Yonetici(string kullaniciAdi, string sifre, int tcNo, string adSoyad,bool yoneticiMi) : base(kullaniciAdi, sifre, tcNo, adSoyad,yoneticiMi)
+        public Yonetici(string kullaniciAdi, string sifre, int tcNo, string adSoyad,bool yoneticiMi) 
+            : base(kullaniciAdi, sifre, tcNo, adSoyad,yoneticiMi)
         {
         }
 
-        internal Otel YonetilenOtel { get => yonetilenOtel; set => yonetilenOtel = value; }
+        public Otel YonetilenOtel { get => yonetilenOtel; set => yonetilenOtel = value; }
 
         public void OdaEkle(Oda oda)
         {

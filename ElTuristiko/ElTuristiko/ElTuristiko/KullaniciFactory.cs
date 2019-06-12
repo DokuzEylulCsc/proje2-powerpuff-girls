@@ -8,14 +8,14 @@ namespace ElTuristiko
 {
     class KullaniciFactory 
     {
-        public  Musteri MusteriOlustur()
+        public Musteri MusteriOlustur(string kullaniciAd,string sifre,int tcNo,string adSoyad,bool yoneticiMi)
         {
-            throw new NotImplementedException();
+            return new Musteri(kullaniciAd,sifre,tcNo,adSoyad,yoneticiMi);
         }
 
-        public  Yonetici YoneticiOlustur()
+        public  Yonetici YoneticiOlustur(string kullaniciAd, string sifre, int tcNo, string adSoyad, bool yoneticiMi)
         {
-            throw new NotImplementedException();
+            return new Yonetici(kullaniciAd,sifre,tcNo,adSoyad,yoneticiMi);
         }
     }
 }
