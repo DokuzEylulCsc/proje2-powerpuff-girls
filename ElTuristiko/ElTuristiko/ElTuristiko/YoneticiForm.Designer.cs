@@ -38,6 +38,8 @@
             this.yildizCB = new System.Windows.Forms.ComboBox();
             this.turCB = new System.Windows.Forms.ComboBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // otelEkleBtn
@@ -133,11 +135,20 @@
             this.monthCalendar1.TabIndex = 13;
             this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(280, 64);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(498, 360);
+            this.dataGridView1.TabIndex = 14;
+            // 
             // YoneticiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.turCB);
             this.Controls.Add(this.yildizCB);
@@ -151,6 +162,8 @@
             this.Name = "YoneticiForm";
             this.Text = "Anasayfa";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.YoneticiForm_FormClosing);
+            this.Load += new System.EventHandler(this.YoneticiForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +181,6 @@
         private System.Windows.Forms.ComboBox yildizCB;
         private System.Windows.Forms.ComboBox turCB;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
