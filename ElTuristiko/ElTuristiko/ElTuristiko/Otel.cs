@@ -20,13 +20,15 @@ namespace ElTuristiko
             this.konum = konum;
             this.yildizSayisi = yildizSayisi;
             this.tur = tur;
+            this.odalar = new List<Oda>();
         }
 
-        public string OtelAdi { get => otelAdi;  }
-        public string Konum { get => konum; }
-        public int YildizSayisi { get => yildizSayisi;  }
-        public string Tur { get => tur;  }
-        internal List<Oda> Odalar { get => odalar;  }
+        public string OtelAdi { get => otelAdi; set => otelAdi = value; }
+        public string Konum { get => konum; set => konum = value; }
+        public int YildizSayisi { get => yildizSayisi; set => yildizSayisi = value; }
+        public string Tur { get => tur; set => tur = value; }
+        public List<Oda> Odalar { get => odalar; set => odalar = value; }
+
         public void OdalaraEkle(Oda oda) { }
 
     }

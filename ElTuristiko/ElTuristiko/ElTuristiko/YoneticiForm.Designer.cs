@@ -37,6 +37,7 @@
             this.konumTextBox = new System.Windows.Forms.TextBox();
             this.yildizCB = new System.Windows.Forms.ComboBox();
             this.turCB = new System.Windows.Forms.ComboBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.SuspendLayout();
             // 
             // otelEkleBtn
@@ -125,11 +126,19 @@
             this.turCB.Size = new System.Drawing.Size(121, 21);
             this.turCB.TabIndex = 11;
             // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(12, 64);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 13;
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
+            // 
             // YoneticiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.turCB);
             this.Controls.Add(this.yildizCB);
             this.Controls.Add(this.konumTextBox);
@@ -158,5 +167,6 @@
         private System.Windows.Forms.TextBox konumTextBox;
         private System.Windows.Forms.ComboBox yildizCB;
         private System.Windows.Forms.ComboBox turCB;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }

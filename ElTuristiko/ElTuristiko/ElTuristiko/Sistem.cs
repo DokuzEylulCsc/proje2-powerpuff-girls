@@ -17,6 +17,7 @@ namespace ElTuristiko
         }
         public static Sistem GetInstance()
         {
+            //singleton çağırıcı
             if (instance == null)
             {
                 instance = new Sistem();
@@ -36,24 +37,28 @@ namespace ElTuristiko
 
         public void OtelEkle(Otel otel)
         {
+            //sisteme otel ekler
             oteller.Add(otel);
             DosyayaKaydet();
         }
 
         public void MusteriEkle(Musteri musteri)
         {
+            //sisteme müşteri ekler
             musteriler.Add(musteri);
             DosyayaKaydet();
         }
 
         public void YoneticiEkle(Yonetici yonetici)
         {
+            //sisteme yönetici ekler
             yoneticiler.Add(yonetici);
             DosyayaKaydet();
         }
 
         public void DosyayaKaydet()
         {
+            //bilgileri json.net kütüphanesi ile dosyalara yazar
             File.WriteAllText(@"./musteriler.json", JsonConvert.SerializeObject(musteriler));
             File.WriteAllText(@"./yoneticiler.json", JsonConvert.SerializeObject(yoneticiler));
             File.WriteAllText(@"./oteller.json", JsonConvert.SerializeObject(oteller));
@@ -61,8 +66,14 @@ namespace ElTuristiko
 
         public void DosyadanOku()
         {
+            //bilgileri json.net kütüphanesi ile dosyalardan okur
+            JsonConverter[] converters = { new OtelConverter() };
             musteriler = JsonConvert.DeserializeObject<List<Musteri>>(File.ReadAllText(@"./musteriler.json"));
-            yoneticiler = JsonConvert.DeserializeObject<List<Yonetici>>(File.ReadAllText(@"./yoneticiler.json"));
+            yoneticiler = JsonConvert.DeserializeObject<List<Yonetici>>(File.ReadAllText(@"./yoneticiler.json")
+                , new JsonSerializerSettings()
+                {
+                    Converters = converters
+                });
             oteller = JsonConvert.DeserializeObject<List<Otel>>(File.ReadAllText(@"./oteller.json"));
         }
     }

@@ -2,7 +2,7 @@
 {
     public class Yonetici:Kullanici
     {
-        private Otel yonetilenOtel = null;
+        private Otel yonetilenOtel;
 
         public Yonetici(string kullaniciAdi, string sifre, int tcNo, string adSoyad,bool yoneticiMi) 
             : base(kullaniciAdi, sifre, tcNo, adSoyad,yoneticiMi)

@@ -54,6 +54,7 @@
     <Compile Include="MusteriForm.Designer.cs">
       <DependentUpon>MusteriForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OtelConverter.cs" />
     <Compile Include="YoneticiForm.cs">
       <SubType>Form</SubType>
     </Compile>
